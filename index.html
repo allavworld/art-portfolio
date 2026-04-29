@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alla — Portfolio</title>
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0;
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    color: #1a1a1a;
+    background: #fafaf7;
+    line-height: 1.5;
+  }
+  header {
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e8e6df;
+  }
+  header h1 {
+    margin: 0 0 .5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    letter-spacing: .02em;
+  }
+  header p {
+    margin: 0;
+    color: #6b6b66;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  figure {
+    margin: 0;
+    cursor: zoom-in;
+  }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #efeee8;
+    transition: opacity .25s ease;
+  }
+  figure img:hover { opacity: .88; }
+  figcaption {
+    margin-top: .65rem;
+    font-size: .9rem;
+    color: #4a4a45;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  figcaption .year { color: #8c8c85; font-variant-numeric: tabular-nums; }
+
+  footer {
+    text-align: center;
+    padding: 3rem 1.5rem 4rem;
+    color: #8c8c85;
+    font-size: .85rem;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(20, 20, 18, .94);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 2rem;
+    z-index: 100;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Alla</h1>
+  <p>selected works</p>
+</header>
+
+<main>
+  <div class="grid" id="grid">
+    <figure>
+      <img src="images/graph_2026_figure-study.jpg" alt="Figure Study" loading="lazy">
+      <figcaption><span>Figure Study</span><span class="year">2026</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/opast_2025_olympia.jpg" alt="Olympia (after Manet)" loading="lazy">
+      <figcaption><span>Olympia</span><span class="year">2025</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/IMG_4070.jpg" alt="Untitled" loading="lazy">
+      <figcaption><span>Untitled I</span><span class="year">—</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/IMG_4125.jpg" alt="Untitled" loading="lazy">
+      <figcaption><span>Untitled II</span><span class="year">—</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/IMG_4195.jpg" alt="Untitled" loading="lazy">
+      <figcaption><span>Untitled III</span><span class="year">—</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/IMG_4317.jpg" alt="Untitled" loading="lazy">
+      <figcaption><span>Untitled IV</span><span class="year">—</span></figcaption>
+    </figure>
+  </div>
+</main>
+
+<footer>© Alla</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <img src="" alt="">
+</div>
+
+<script>
+  const grid = document.getElementById('grid');
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  grid.addEventListener('click', e => {
+    const fig = e.target.closest('figure');
+    if (!fig) return;
+    const img = fig.querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+  });
+  lb.addEventListener('click', () => {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    lbImg.src = '';
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) lb.click();
+  });
+</script>
+
+</body>
+</html>
