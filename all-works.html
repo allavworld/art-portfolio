@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alla — Portfolio</title>
+<title>Alla — All Works</title>
 <style>
   *,*::before,*::after { box-sizing: border-box; }
   html { -webkit-font-smoothing: antialiased; }
@@ -31,38 +31,6 @@
     font-size: 1rem;
     font-style: italic;
   }
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  figure {
-    margin: 0;
-    cursor: zoom-in;
-  }
-  figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    background: #efeee8;
-    transition: opacity .25s ease;
-  }
-  figure img:hover { opacity: .88; }
-  figcaption {
-    margin-top: .65rem;
-    font-size: .9rem;
-    color: #4a4a45;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  figcaption .year { color: #8c8c85; font-variant-numeric: tabular-nums; }
-
   nav {
     text-align: center;
     padding: 1.25rem 1rem;
@@ -79,6 +47,29 @@
   }
   nav a:hover { border-bottom-color: #4a4a45; }
   nav a.current { border-bottom-color: #1a1a1a; color: #1a1a1a; }
+
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  figure {
+    margin: 0;
+    cursor: zoom-in;
+  }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #efeee8;
+    transition: opacity .25s ease;
+  }
+  figure img:hover { opacity: .88; }
 
   footer {
     text-align: center;
@@ -103,15 +94,11 @@
     object-fit: contain;
     cursor: zoom-in;
     box-shadow: 0 20px 60px rgba(0,0,0,.5);
-    transition: none;
   }
-  /* Actual-pixel size — image displays at its natural dimensions, scrolls if needed */
   .lightbox.actual { align-items: flex-start; justify-content: flex-start; padding: 2rem; }
   .lightbox.actual img {
-    max-width: none;
-    max-height: none;
-    width: auto;
-    height: auto;
+    max-width: none; max-height: none;
+    width: auto; height: auto;
     object-fit: none;
     cursor: zoom-out;
     margin: auto;
@@ -134,40 +121,39 @@
 
 <header>
   <h1>Alla</h1>
-  <p>selected works</p>
+  <p>all works</p>
 </header>
 
 <nav>
-  <a href="index.html" class="current">Selected Works</a>
-  <a href="all-works.html">All Works</a>
+  <a href="index.html">Selected Works</a>
+  <a href="all-works.html" class="current">All Works</a>
 </nav>
 
 <main>
   <div class="grid" id="grid">
-    <figure>
-      <img src="images/graph_2026_figure-study.jpg" alt="Figure Study" loading="lazy">
-      <figcaption><span>Figure Study</span><span class="year">2026</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/opast_2025_olympia.jpg" alt="Olympia (after Manet)" loading="lazy">
-      <figcaption><span>Olympia</span><span class="year">2025</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4070.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled I</span><span class="year">—</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4125.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled II</span><span class="year">—</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4195.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled III</span><span class="year">—</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4317.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled IV</span><span class="year">—</span></figcaption>
-    </figure>
+    <figure><img src="images-all/a34a3976.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a3978.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a3982.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a3985-2.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a3989.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a3998.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4003.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4012.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4016.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4018.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4020.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4031.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4033.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4043.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4049.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/a34a4061.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/fullsizerender.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/img_1892.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/img_8952.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/photo_2025-03-19_11-09-22.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/photo_2026-04-15_12-12-14.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/photo_2026-04-15_12-12-28.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-all/photo_2026-04-15_12-12-47.jpg" alt="" loading="lazy"></figure>
   </div>
 </main>
 
@@ -206,8 +192,6 @@
     openLightbox(img.src, img.alt);
   });
 
-  // Click on the image: toggle between fit-to-viewport and actual pixel size.
-  // Click anywhere else in the lightbox: close.
   lb.addEventListener('click', e => {
     if (e.target === lbImg) {
       lb.classList.toggle('actual');
