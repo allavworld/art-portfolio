@@ -38,8 +38,14 @@
   }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
+  }
+  .grid.oils { grid-template-columns: repeat(3, 1fr); }
+  .grid.drawings { grid-template-columns: repeat(4, 1fr); margin-top: 2rem; gap: 1.5rem; }
+  .grid.drawings figcaption { font-size: .82rem; }
+  .grid.drawings figcaption .year { font-size: .75rem; }
+  @media (max-width: 720px) {
+    .grid.oils, .grid.drawings { grid-template-columns: 1fr; }
   }
   figure {
     margin: 0;
@@ -57,11 +63,16 @@
     margin-top: .65rem;
     font-size: .9rem;
     color: #4a4a45;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    line-height: 1.35;
   }
-  figcaption .year { color: #8c8c85; font-variant-numeric: tabular-nums; }
+  figcaption .year {
+    display: block;
+    margin-top: .15rem;
+    font-size: .8rem;
+    color: #8c8c85;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .03em;
+  }
 
   nav {
     text-align: center;
@@ -144,34 +155,36 @@
 </nav>
 
 <main>
-  <div class="grid" id="grid">
+  <div class="grid oils">
     <figure>
-      <img src="images/marcus_2026_aurelius-cast.jpg" alt="Marcus Aurelius (cast study)" loading="lazy">
+      <img src="images/oil_2026_minu.jpg" alt="Portrait — Minu" loading="lazy">
+      <figcaption><span>Portrait — Minu</span><span class="year">2026</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/oil_2025_olympia.jpg" alt="Landscape" loading="lazy">
+      <figcaption><span>Landscape</span><span class="year">2025</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/oil_2026_nude_study.jpg" alt="Nude Study" loading="lazy">
+      <figcaption><span>Nude Study</span><span class="year">2026</span></figcaption>
+    </figure>
+  </div>
+  <div class="grid drawings">
+    <figure>
+      <img src="images/graph_2025_portrait.jpg" alt="Portrait" loading="lazy">
+      <figcaption><span>Portrait</span><span class="year">2025</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/graph_2026_still-life.jpg" alt="Still Life" loading="lazy">
+      <figcaption><span>Still Life</span><span class="year">2026</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/graph_2026_cast.jpg" alt="Marcus Aurelius" loading="lazy">
       <figcaption><span>Marcus Aurelius</span><span class="year">2026</span></figcaption>
     </figure>
     <figure>
       <img src="images/graph_2026_figure-study.jpg" alt="Figure Study" loading="lazy">
       <figcaption><span>Figure Study</span><span class="year">2026</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/opast_2025_olympia.jpg" alt="Olympia (after Manet)" loading="lazy">
-      <figcaption><span>Olympia</span><span class="year">2025</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4070.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled I</span><span class="year">—</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4125.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled II</span><span class="year">—</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4195.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled III</span><span class="year">—</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/IMG_4317.jpg" alt="Untitled" loading="lazy">
-      <figcaption><span>Untitled IV</span><span class="year">—</span></figcaption>
     </figure>
   </div>
 </main>
@@ -184,7 +197,7 @@
 </div>
 
 <script>
-  const grid = document.getElementById('grid');
+  const grid = document.querySelector('main');
   const lb = document.getElementById('lightbox');
   const lbImg = lb.querySelector('img');
   const lbHint = document.getElementById('lbHint');
