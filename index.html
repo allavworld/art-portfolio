@@ -40,10 +40,8 @@
     display: grid;
     gap: 2rem;
   }
-  .grid.oils { grid-template-columns: repeat(3, 1fr); }
-  .grid.drawings { grid-template-columns: repeat(4, 1fr); margin-top: 2rem; gap: 1.5rem; }
-  .grid.drawings figcaption { font-size: .82rem; }
-  .grid.drawings figcaption .year { font-size: .75rem; }
+  .grid.oils, .grid.drawings { grid-template-columns: repeat(3, 1fr); }
+  .grid.drawings { margin-top: 2rem; }
   @media (max-width: 720px) {
     .grid.oils, .grid.drawings { grid-template-columns: 1fr; }
   }
@@ -170,10 +168,6 @@
     </figure>
   </div>
   <div class="grid drawings">
-    <figure>
-      <img src="images/graph_2025_portrait.jpg" alt="Portrait" loading="lazy">
-      <figcaption><span>Portrait</span><span class="year">2025</span></figcaption>
-    </figure>
     <figure>
       <img src="images/graph_2026_still-life.jpg" alt="Still Life" loading="lazy">
       <figcaption><span>Still Life</span><span class="year">2026</span></figcaption>
