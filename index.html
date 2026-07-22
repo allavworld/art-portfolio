@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alla — Portfolio</title>
+<title>Alla — NYAA Portfolio</title>
 <style>
   *,*::before,*::after { box-sizing: border-box; }
   html { -webkit-font-smoothing: antialiased; }
@@ -31,47 +31,6 @@
     font-size: 1rem;
     font-style: italic;
   }
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-  }
-  .grid {
-    display: grid;
-    gap: 2rem;
-  }
-  .grid.oils, .grid.drawings { grid-template-columns: repeat(3, 1fr); }
-  .grid.drawings { margin-top: 2rem; }
-  @media (max-width: 720px) {
-    .grid.oils, .grid.drawings { grid-template-columns: 1fr; }
-  }
-  figure {
-    margin: 0;
-    cursor: zoom-in;
-  }
-  figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    background: #efeee8;
-    transition: opacity .25s ease;
-  }
-  figure img:hover { opacity: .88; }
-  figcaption {
-    margin-top: .65rem;
-    font-size: .9rem;
-    color: #4a4a45;
-    line-height: 1.35;
-  }
-  figcaption .year {
-    display: block;
-    margin-top: .15rem;
-    font-size: .8rem;
-    color: #8c8c85;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: .03em;
-  }
-
   nav {
     text-align: center;
     padding: 1.25rem 1rem;
@@ -88,6 +47,29 @@
   }
   nav a:hover { border-bottom-color: #4a4a45; }
   nav a.current { border-bottom-color: #1a1a1a; color: #1a1a1a; }
+
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  figure {
+    margin: 0;
+    cursor: zoom-in;
+  }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #efeee8;
+    transition: opacity .25s ease;
+  }
+  figure img:hover { opacity: .88; }
 
   footer {
     text-align: center;
@@ -112,15 +94,11 @@
     object-fit: contain;
     cursor: zoom-in;
     box-shadow: 0 20px 60px rgba(0,0,0,.5);
-    transition: none;
   }
-  /* Actual-pixel size — image displays at its natural dimensions, scrolls if needed */
   .lightbox.actual { align-items: flex-start; justify-content: flex-start; padding: 2rem; }
   .lightbox.actual img {
-    max-width: none;
-    max-height: none;
-    width: auto;
-    height: auto;
+    max-width: none; max-height: none;
+    width: auto; height: auto;
     object-fit: none;
     cursor: zoom-out;
     margin: auto;
@@ -143,43 +121,38 @@
 
 <header>
   <h1>Alla</h1>
-  <p>selected works</p>
+  <p>NYAA portfolio</p>
 </header>
 
 <nav>
-  <a href="index.html" class="current">Selected Works</a>
+  <a href="index.html" class="current">NYAA Portfolio</a>
   <a href="all-works.html">All Works</a>
   <a href="life-drawing.html">Life Drawing</a>
 </nav>
 
 <main>
-  <div class="grid oils">
-    <figure>
-      <img src="images/oil_2026_minu.jpg" alt="Portrait — Minu" loading="lazy">
-      <figcaption><span>Portrait — Minu</span><span class="year">2026</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/oil_2025_olympia.jpg" alt="Landscape" loading="lazy">
-      <figcaption><span>Landscape</span><span class="year">2025</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/oil_2026_nude_study.jpg" alt="Nude Study" loading="lazy">
-      <figcaption><span>Nude Study</span><span class="year">2026</span></figcaption>
-    </figure>
-  </div>
-  <div class="grid drawings">
-    <figure>
-      <img src="images/graph_2026_still-life.jpg" alt="Still Life" loading="lazy">
-      <figcaption><span>Still Life</span><span class="year">2026</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/graph_2026_cast.jpg" alt="Marcus Aurelius" loading="lazy">
-      <figcaption><span>Marcus Aurelius</span><span class="year">2026</span></figcaption>
-    </figure>
-    <figure>
-      <img src="images/graph_2026_figure-study.jpg" alt="Figure Study" loading="lazy">
-      <figcaption><span>Figure Study</span><span class="year">2026</span></figcaption>
-    </figure>
+  <div class="grid" id="grid">
+    <figure><img src="images-nyaa/01_oil_2025_healing-hands.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/02_oil_2026_nude_study.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/03_photo_2026-07-21_22-48-49.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/04_graph_2026_figure-study.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/05_graph_2026_still-life.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/06_marcus_drawing_2026.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/07_photo_2026-07-21_22-06-22.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/08_a34a4018.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/09.01_photo_2026-07-21_22-48-50.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/10_a34a3982.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/11_img_8952.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/12_photo_2026-07-21_23-31-16.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/13_photo_2026-07-21_23-31-09.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/14_photo_2026-07-21_22-48-48.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/15_img_1892.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/16_img_4195.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/17_oil_2024_silks.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/18_a34a4049.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/19_oil_2024_dream-1.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/20_voil_2025_olympia.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="images-nyaa/21_oil_2024_eugene.jpg" alt="" loading="lazy"></figure>
   </div>
 </main>
 
@@ -218,8 +191,6 @@
     openLightbox(img.src, img.alt);
   });
 
-  // Click on the image: toggle between fit-to-viewport and actual pixel size.
-  // Click anywhere else in the lightbox: close.
   lb.addEventListener('click', e => {
     if (e.target === lbImg) {
       lb.classList.toggle('actual');
